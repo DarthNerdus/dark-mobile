@@ -1,0 +1,1550 @@
+@media screen and (min-width: 481px){
+/* "Dark" */
+* {
+	padding: 0em;
+	margin: 0em;
+}
+/* {Global} */
+body {
+	max-width: 1000px;
+	background: #191919;
+	margin: 0 auto;
+	font-family: Tahoma, Helvetica, Geneva, sans-serif;
+	font-size: 8pt;
+	color: rgba(255,255,255,1);
+}
+a {
+	text-decoration: none;
+	color: rgba(197,197,197,1);
+	border: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: rgba(255,255,255,1);
+	border: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 5px 0px;
+}
+
+h2 {
+	text-align: center;
+}
+
+h4 {
+	font-size: 8pt;
+}
+
+p {
+	margin: 10px 5px;
+}
+
+blockquote {
+	background-color: rgba(73,72,72,1);
+	margin: 10px;
+	padding: 10px;
+	color: rgba(255,255,255,1) !important;
+	border: dashed thin rgba(138,138,138,1);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: solid thin rgba(85,85,85,1);
+}
+
+tr {
+	background-color: rgba(51,51,51,1);
+}
+
+td, th {
+	padding: 5px;
+	text-align: left;
+	border: solid thin rgba(85,85,85,1);
+}
+
+li {
+	margin: 5px 15px;
+}
+
+ul.nobullet {
+	list-style-type: none;
+}
+
+a img,	
+img {
+	border: none;
+}
+
+.hidden,
+input.hidden {
+	display: none;
+}
+
+.nobr {
+	white-space: nowrap;
+}
+
+.noborder {
+	border: none !important;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;	
+}
+
+.min_padding {
+	padding: 0px;
+	margin: 0px;
+}
+
+p.min_padding {
+	margin: 2px 0px;
+}
+
+/* Needed for IE for the HTML5 Placeholder jQuery Plugin... */
+.placeholder { color: #aaa; }
+
+/* {End: Global} */
+/* {General Layout} */
+#wrapper {
+	width: 100%;
+}
+
+#header {
+	min-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 8pt;
+}
+
+#logo {
+	position: relative;
+	top: 20px;
+	background: url(https://static.passthepopcorn.me/static/styles/dark/images/logo.png) top center no-repeat;
+	width: 700px;
+	height: 124px;
+	margin: 0 auto 20px auto;
+}
+
+#logo a {
+	display: block;
+	width: 700px;
+	height: 124px;
+	margin-top: 8px;
+	border: none;
+}
+
+#userinfo{
+	position: absolute; 
+	top: 0px;
+	left: 1%;
+	width: 98%; 
+	height: 25px; 
+	background: url(https://static.passthepopcorn.me/static/styles/dark/images/blackgrad.png) repeat-x;
+	padding: 0 1px 1px 1px; 
+	margin: 0 auto;	
+	text-align: center;
+	color: rgba(255,255,255,1); 
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	z-index: 20; 
+}
+
+#userinfo a {
+	text-decoration: underline;
+	color: rgba(187,187,187,1);
+}
+
+#userinfo a:hover {
+	text-decoration: none;
+}
+
+#userinfo ul {
+	display: inline;
+	margin: 0px 6px;
+}
+
+#userinfo ul li {
+	position: relative;
+	display: inline;
+	vertical-align: middle;
+	margin: 0 1px;
+	padding: 0px;
+	line-height: 20px;
+}
+
+/* The drop-down menu is based on Aleksandar Vacic's ADxMenu. */
+
+#userinfo_minor .dropdownmenu li
+{
+	display: block;
+	float: none; /* items of the nested menus are kept on separate lines */
+	background: rgba(68,68,68,1); /* Same color as ".rowa". */
+}
+
+#userinfo_minor .dropdownmenu ul
+{
+	visibility: hidden;
+	position: absolute;
+	z-index: 10;
+	left: auto;
+	right: 0;
+
+	/* it should not disappear when your mouse moves a bit outside the submenu
+	YOU SHOULD NOT STYLE the background of the ".dropdownmenu UL" or this feature may not work properly! */
+	padding: 10px 10px 10px 10px;
+	margin: -10px -10px -10px -10px;
+}
+
+#userinfo_minor .dropdownmenu:hover > ul,
+#userinfo_minor .dropdownmenu li:hover > ul
+{
+	visibility: visible;
+	top: 100%; /* 1st level go below their parent item */
+}
+
+#userinfo_minor .dropdownmenu ul a
+{
+	text-align: left;
+	text-decoration: none;
+	padding: .4em 1.5em;
+	display: block;
+	position: relative;
+	white-space: nowrap;
+}
+
+#userinfo_minor .dropdownmenu a:hover,
+#userinfo_minor .dropdownmenu:hover > a,
+#userinfo_minor .dropdownmenu li:hover > a
+{
+	text-decoration: none;
+	background: rgba(51,51,51,1); /* Same color as "#menu". */
+}
+
+.new-subscriptions {
+	color: rgba(255,255,255,1) !important;
+}
+
+#menu {
+	background-color: rgba(51,51,51,1);
+    width: 750px;
+	height: 28px;
+	margin: 5px 10px 10px 20px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 10pt;
+	text-align: left;
+	z-index: 7;
+	opacity: 0.75;
+	-ms-filter: "alpha(opacity=75)";
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#menu ul {
+	padding-top: 5px;
+	text-align: center;
+}
+
+#menu ul li {
+	display: inline;
+	padding: 5px;
+	margin: 0px;
+	text-align: center;
+	font-size: 12px;
+}
+
+#menu ul li a {
+	padding: .5em;
+}
+
+#searchbars {
+	width: 1000px;
+	background: url(https://static.passthepopcorn.me/static/styles/dark/images/blackgrad.png) repeat-x;
+	padding: 0.6em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	text-align: center;
+	opacity: 1;
+	-ms-filter: "alpha(opacity=100)";
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+}
+
+#searchbars ul {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+
+#searchbars ul li {
+	position: relative;
+	display: inline;
+	margin: 0px;
+}
+
+#searchbars form {
+	display: inline;
+}
+
+#searchbars input {
+	position: relative;
+	top: -1px;
+	background-color: rgba(22,23,24,1);
+	font-size: 0.9em;
+	color: rgba(119,119,119,1);
+	border: solid thin rgba(58,60,63,1);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#searchbars ul li ul {
+	position: absolute;
+	left: 0;
+	display: block;
+	width: 230px;
+	color: rgba(119,119,119,1);
+	border: solid thin rgba(87,87,87,1);
+	z-index: 1000;
+}
+
+#searchbars ul li:nth-child(2) ul {
+	width: 190px;
+}
+
+#searchbars ul li ul li {
+	display: block;
+	background: rgba(22,23,24,1);
+	margin: 0;
+	padding: 5px 10px;
+	text-align: center;
+	line-height: 15px;
+	cursor: pointer;
+	border-bottom: solid thin rgb(50,50,50);
+}
+
+#searchbars ul li ul li.highlight {
+	background: rgba(53,53,53,1);
+	color: rgba(255,255,255,1);
+}
+
+#content {
+	position: relative;
+	width: 983px;
+	background-color: rgba(0,0,0,1);
+	margin: 0px auto 0px auto;
+	padding: 15px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	overflow: auto;
+}
+
+span.last_topic {
+	float:left;
+	max-width: 525px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.sidebar {
+	float: right;
+	width: 250px;
+}
+
+.sidebar img {
+	max-width: 220px !important;
+}
+
+.main_column {
+	max-width: 715px;
+	margin: 0px 255px 10px 0px;
+}
+
+#collage .main_column,
+#bookmarks .main_column
+{
+	margin-bottom: 0px;
+}
+
+.main_column .box,
+.main_column table,
+.sidebar .box {
+	margin-bottom: 10px;
+}
+
+#collage .main_column table,
+#bookmarks .main_column table
+{
+	margin-bottom: 0px;
+}
+
+.box {
+	background-color: rgba(51,51,51,1);
+	font-size: 8pt;
+	border: solid thin rgba(85,85,85,1);
+}
+
+.pad {
+	padding: 1em;
+}
+
+.pad h3,
+.pad h4,
+.padbox h3,
+.padbox h4 {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.head {
+	background: url(https://static.passthepopcorn.me/static/styles/dark/images/blackgrad.png) repeat-x, rgba(8,9,9,1);
+	padding: 4px;
+	border-bottom: solid thin rgba(85,85,85,1);
+}
+
+.colhead {
+	background: url(https://static.passthepopcorn.me/static/styles/dark/images/blackgrad.png) repeat-x, rgba(8,9,9,1);
+	font-weight: bold;
+	color: rgba(255,255,255,1);
+}
+
+td.colhead,
+.colhead td {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.colhead_dark {
+	background: url(https://static.passthepopcorn.me/static/styles/dark/images/blackgrad.png) repeat-x, rgba(8,9,9,1);
+}
+
+.colhead .sign,
+.colhead_dark .sign {
+	padding: 0px 8px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.body {
+	padding: 3px 10px 10px 10px;
+}
+
+.thin {
+	width: 974px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul.thin {
+	margin: 0px 0px 0px 25px;
+	padding: 0px;
+}
+
+ul.thin li {
+	margin: 0px;
+	padding: 0px;
+}
+
+.linkbox {
+	padding: 5px;
+	text-align: center;
+}
+
+.show_torrents {
+	background: url(https://static.passthepopcorn.me/static/styles/dark/images/show.png) no-repeat center center;
+	width: 28px;
+	height: 28px;
+}
+
+.hide_torrents {
+	background: url(https://static.passthepopcorn.me/static/styles/dark/images/hide.png) no-repeat center center;
+	width: 28px;
+	height: 28px;
+}
+
+.show_torrents_link {
+	display: block;
+	width: 28px;
+	height: 28px;
+	border: none;
+}
+
+.filter_torrents {
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+}
+
+.filter_torrents .submit {
+	padding-top: 5px;
+	text-align: right;
+}
+
+.filter_torrents .inputtext {
+	width: 400px;	
+}
+
+.filter_torrents .smaller {
+	width: 300px;	
+}
+
+.filter_torrents .smallest {
+	width: 50px;	
+}
+
+.filter_torrents option {
+	padding-right: 8px;
+}
+
+#filter_torrents_toggle
+{
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#filter_torrents_typetext_div
+{
+	padding: 4px;
+	float: left;
+	position: relative;
+	left: 50%;
+}
+
+#filter_torrents_typetext
+{
+	position: relative;
+	right: 50%;
+	padding: 0 10px;
+}
+
+#filter_torrents_firstrowpadding
+{
+	padding-top: 4px;
+}
+
+td.label {
+	font-weight: bold;
+	text-align: right;
+	width: 180px;
+}
+
+.cat_list {
+	margin-top: -1px;
+}
+
+.cat_list tr td {
+	border: none;
+}
+
+.invitetree ul {
+	margin-left: 20px;
+}
+
+table.forum_post td.body {
+	width: 100%;
+}
+
+.forum_post_content
+{
+	max-width: 791px; /* Needed to make sure that the pre tag won't enlarge the table. */
+}
+
+#ttable {
+	max-width: 715px !important;
+	width: 715px;
+}
+
+#ttable tr.pad {
+	word-wrap: break-word;
+}
+
+#ttable pre {
+	overflow-x: auto !important;
+	width: 618px !important;
+	white-space: pre;
+	word-wrap: normal;
+}
+
+#ttable pre.nfo_pre
+{
+	width: 658px !important;
+}
+
+.spoiler pre {
+	padding-bottom: 20px;
+	overflow-x: auto !important;
+}
+
+.torrent_table tr {
+	vertical-align: top;
+}
+
+.torrent_table a img {
+	border: none;
+}
+
+.torrent_table tr .center {
+	vertical-align: middle;
+	text-align: center;
+	word-wrap: break-word;
+}
+
+.torrent_table td .small {
+	width: 20px;
+}
+
+.torrent_table table {
+	width: 94%;
+	margin: 10px;
+}
+
+.torrent_table table .colhead_dark {
+	background-image: none;
+	background-color: rgba(51,51,51,1);
+}
+
+.torrent_table div.tags {
+	font-weight: normal;
+}
+
+.tags {
+	padding: 2px;
+	font-style: italic;
+}
+
+.tags a {
+	color: rgba(201,201,201,1);
+}
+
+.tags a:hover {
+	text-decoration: underline;
+	color: rgba(255,255,255,1);
+}
+
+.tags_listing
+{
+	vertical-align: top;
+}
+
+.browserating {
+	display: inline;
+	padding: 0px 4px;
+	background-color: rgba(77,77,77,1);
+}
+
+.imdbtitle {
+	font-style: normal;
+	font-weight: bold;
+}
+
+.imdbrating {
+	font-style: normal;
+}
+
+.group_torrent {
+	background-color: rgba(51,51,51,1);
+}
+
+.group_torrent span {
+	float: right;
+}
+
+.torrent_table tr.group_torrent.HighlightedTorrentRow
+{
+	background-color: rgba(68, 68, 68, 1); /* Same as rowa. */
+}
+
+.group {
+	background-color: rgba(34,34,34,1);
+	font-weight: bold;
+}
+
+.rowa {
+	background-color: rgba(68,68,68,1);
+}
+
+img.award {
+	width: 15px !important;
+	height: 13px !important;
+}
+
+#footer {
+	margin-top: 40px;
+	max-width: 1000px;
+	margin: 30px auto 10px auto;
+	padding: 1em 0;
+	text-align: center;
+	color: rgba(255,255,255,1);
+	border-top: solid thin rgba(255,255,255,1);
+	border-bottom: solid thin rgba(255,255,255,1);
+}
+
+#alerts {
+	width: 100%
+}
+
+.alertbar {
+	width: 400px;
+	margin: 5px auto;
+	padding:0.2em;
+	font-weight: bold;
+	text-align: center;
+	color: rgba(236,222,222,1);
+	opacity: 0.75;
+	-ms-filter: "alpha(opacity=75)";
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.blend {
+	background-color: rgba(68,68,68,1);
+}
+
+.alertbar a {
+	text-decoration: none;
+	color: rgba(236,222,222,1);
+}
+
+.alertbar a:hover {
+	text-decoration: underline;
+	color: rgba(255,255,255,1);
+}
+
+.last_read {
+	background: url(https://static.passthepopcorn.me/static/styles/dark/images/go_last_read.png) no-repeat center center;
+	width: 15px;
+	height: 15px;
+	margin-left: 5px;
+	margin-left: 5px;
+}
+
+.last_read a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+.editedby {
+	margin-top: 20px;
+	font-style: italic;
+}
+
+#user input,
+#user textarea {
+	max-width: 700px;
+}
+
+#user .main_column table a img {
+	width: 100px;
+	height: 150px;
+	padding-left: 15px;
+}
+
+table.forum_unread {
+	border: solid 2px rgba(204,204,204,1);
+}
+
+.clear ul.poll li {
+	display: block;
+	height: 20px;
+}
+
+tr.unreadpm {
+	background-color: rgba(175,37,37,1);
+}
+
+.save_message {
+	background-color: rgba(244,230,73,1);
+	margin-left: auto;
+	margin-right: auto;
+	padding: 3px 0px;
+	text-align: center;
+	font-weight: bold;
+	color: rgba(73,40,2,1);
+	border-top: solid thin rgba(193,150,92,1);
+}
+
+.error_message {
+	background-color: rgba(51,51,51,1);
+	padding: 3px 0px;
+	text-align: center;
+	font-weight: bold;
+	color: rgba(255,255,255,1);
+	border-top: solid thin rgba(85,85,85,1)
+}
+
+.permission_container
+{
+	float: left;
+	width: 315px;
+	padding: 5px;
+}
+
+table.mediainfo
+{
+	margin: 0;
+	width: auto;
+}
+
+.torrent_table table.mediainfo
+{
+	width: 100%;
+}
+
+table.mediainfo tr
+{
+	background-color: rgba(73,72,72,1);
+	vertical-align: top;
+}
+
+.torrent_table table.mediainfo tr
+{
+	background-color: rgba(51,51,51,1);
+}
+
+table.mediainfo table
+{
+	margin: 0;
+	width: 100%;
+	border: none;
+	border-top: solid thin rgba(85,85,85,1);
+	border-collapse: collapse;
+}
+
+table.mediainfo table caption
+{
+	font-weight: bold;
+}
+
+table.mediainfo table td
+{
+	border: none;
+	padding: 2px;
+}
+
+.text_preview_border
+{
+	/* border same as in table */
+	border: solid thin rgba(85,85,85,1);
+	padding: 0.5em;
+}
+
+/* {End: General Layout} */
+/* {Page Specific Selectors} */
+#filmclub img {
+	width: 220px;
+}
+
+.head a[href="leaderboard.php"] ~ span {
+	float: none !important;
+	margin-left: 15px;
+}
+
+#last5
+{
+	padding: 1em 0 1em 0;
+}
+
+#last5t table {
+	width: 100% !important;
+	margin: 0;
+	border: none !important;
+}
+
+#last5t table tr {
+	border: none !important;
+}
+
+#last5t table tr:nth-child(1) td
+{
+	padding-bottom: 10px;
+}
+
+#last5t table td {
+	padding: 0 10px;
+	font-size: 8pt !important;
+	border: none !important;
+}
+
+#last5t td a img {
+	width: 100px;
+	height: 150px;
+}
+
+ul.stats li {
+	padding: 0px 0px 1px 0px;
+}
+
+ul.poll li {
+	margin: 0px;
+	padding: 0px 0px 0px 10px;
+}
+
+ul.poll li.graph {
+	margin-bottom: 3px;
+	padding-left: 20px;
+}
+
+#collage_table
+{
+	width: auto;
+	border: 0;
+	margin: 6px 0 6px 6px;
+}
+
+#collage_table td
+{
+	width: 140px;
+	height: 196px;
+}
+
+#collage_table td a
+{
+	width: 140px;
+	height: 196px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#roster table {
+	margin: 0 0 -1px 0;
+}
+
+.wiki_diff_added
+{
+	color: green;
+	background: #dfd;
+	text-decoration: none;
+}
+
+.wiki_diff_deleted
+{
+	color: red;
+	background: #fdd;
+	text-decoration: none;
+}
+
+/* Same as rowa. */
+.generic_datatable tr.even,
+#wiki_history_table tr:nth-child(even)
+{
+	background-color: rgba(68,68,68,1);
+}
+
+.generic_datatable thead th
+{
+	cursor: pointer;
+}
+
+.languageselector,
+.missing_source_filter
+{
+	list-style: none;
+	width: auto;
+	float: left;
+}
+
+.languageselector li,
+.missing_source_filter li
+{
+	margin: 4px 15px 4px 0px;
+}
+
+.languageselector img, input
+{
+	vertical-align: middle;
+}
+
+/* Same as rowa. */
+.missing_table tr:nth-child(even)
+{
+	background-color: rgba(68,68,68,1);
+}
+
+/* Nothing special for .missing_nosource and .missing_notavailable */
+
+.missing_exists
+{
+	font-weight: bold;
+	color: green;
+}
+
+.missing_trumpable
+{
+	font-weight: bold;
+	color: orange;
+}
+
+.missing_missing
+{
+	font-weight: bold;
+	color: red;
+}
+
+/* {End: Page Specific Selectors} */
+/* {Input, Polls, Lightbox} */
+input,
+textarea {
+	padding: 2px 3px;
+}
+
+.left_poll {
+	float: left;
+	width: 2px;
+	height: 9px;
+	background: url('https://static.passthepopcorn.me/static/styles/dark/images/bar_left.gif') center center no-repeat;
+	margin: 0px;
+	padding: 0px;
+}
+
+.center_poll {
+	float: left;
+	height: 9px;
+	background: url('https://static.passthepopcorn.me/static/styles/dark/images/bar.gif') repeat;
+	margin: 0px;
+	padding: 0px;
+}
+
+.right_poll {
+	float: left;
+	width: 2px;
+	height: 9px;
+	background: url('https://static.passthepopcorn.me/static/styles/dark/images/bar_right.gif') center center no-repeat;
+	margin: 0px;
+	padding: 0px;
+}
+
+span.size1 {
+	font-size:0.75em;
+}
+
+span.size2 {
+	font-size:1em;
+}
+
+span.size3 {
+	font-size:1.25em;
+}
+
+span.size4 {
+	font-size:1.5em;
+}
+
+span.size5 {
+	font-size:1.75em;
+}
+
+span.size6 {
+	font-size:2em;
+}
+
+span.size7 {
+	font-size:2.25em;
+}
+
+span.size8 {
+	font-size:2.5em;
+}
+
+span.size9 {
+	font-size:2.75em;
+}
+
+span.size10 {
+	font-size:3em;
+}
+
+.curtain {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.8);
+	z-index:1001;
+}
+
+.lightbox {
+	position: fixed;
+	text-align: center;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+	padding: 0px;
+	z-index:1002;
+	overflow: auto;
+}
+
+.r00 {
+	color: #FF0000;
+}
+
+.r01 {
+	color: #FF1300;
+}
+
+.r02 {
+	color: #FF1300;
+}
+
+.r03 {
+	color: #FF2600;
+}
+
+.r04 {
+	color: #FF4C00;
+}
+
+.r05 {
+	color: #FF5E00;
+}
+
+.r06 {
+	color: #FF5E00;
+}
+
+.r07 {
+	color: #FF7100;
+}
+
+.r08 {
+	color: #FF9700;
+}
+
+.r09 {
+	color: #FFAA00;
+}
+
+.r10 {
+	color: #74C42E;
+}
+
+.r20 {
+	color: #418B00;
+}
+
+.r50 {
+	color: #418B00;
+}
+
+.r99 {
+	color: #418B00;
+}
+/* {End: Input, Polls, Lightbox} */
+
+/* Please let lerk08 know if you make any changes/additions so he can update his files! */
+
+#last5t td {
+	vertical-align: top;
+}
+
+.browse_coverview_undercover
+{
+	padding: 3px;
+	background-image: -o-linear-gradient(top, #222222 0%, #050505 100%);
+	background-image: -moz-linear-gradient(top, #222222 0%, #050505 100%);
+	background-image: -webkit-linear-gradient(top, #222222 0%, #050505 100%);
+	background-image: -ms-linear-gradient(top, #222222 0%, #050505 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222222), color-stop(1, #050505) );
+	background-image: linear-gradient(to bottom, #222222 0%, #050505 100%);
+    border-radius: 0px 0px 6px 6px;
+}
+
+.browse_coverview_rating
+{
+	margin-top: 5px;
+}
+
+.browse_coverview_rating .browserating
+{
+	margin: 0 4px 0 0;
+}
+
+.browse_coverview_rating a,
+.cover_tooltip_tags a,
+.cover_tooltip_ratings a
+{
+	color: rgba(201,201,201,1);
+}
+
+.browse_coverview_rating a:hover,
+.cover_tooltip_tags a:hover,
+.cover_tooltip_ratings a:hover
+{
+	text-decoration: underline;
+	color: rgba(255,255,255,1);
+}
+
+.browse_coverview_title a,
+.cover_toolip_title a
+{
+	color: rgba(255,255,255,1);
+}
+
+.staff_post {
+	color: yellow;
+}
+}
+
+@media screen and (max-device-width: 480px){
+     /* Fidelis by lerk08 at PTP */
+	 /* Modified to work with dark by DarthNerdus */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: rgba(25,25,25,1);
+	font-size: 1em;
+	width: 100%;
+
+}
+
+#userinfo {
+	background: none;
+	height: none;
+	font-size: 2em;
+	left: 0%;
+}
+
+#menu {
+	width:15%;
+}
+
+.thin {
+	width: 100%;
+}
+
+#latest_posts a {
+	font-size: 1.5em;
+	max-width: 400px;
+}
+
+#latest_posts strong a {
+	font-size: 1em;
+}
+
+#content {
+	width: 791px;
+	font-size: 1.3em;
+	background: rgba(25,25,25,1);
+}
+
+.main_column {
+	margin: 0 auto;
+	max-width: 90%;
+}
+
+.head a,
+.colhead a,
+.colhead_dark a {
+margin: 0 .2em 0 .2em;
+}
+
+table.forum_post td.body {
+	padding: .5em;
+}
+
+.head,
+.colhead,
+.colhead_dark {
+	padding: .3em;
+	border: solid thin #000000;
+}
+
+.head td,
+.colhead td,
+.colhead_dark td {
+	text-align: center;
+	padding: .3em;
+	border: solid thin #000;
+}
+
+.pad,
+.body {
+	padding: .4em 0 .4em 0;
+}
+
+blockquote {
+	margin: .9em;
+	padding: .9em;
+	border: dashed thin rgba(0,116,182,1);
+}
+
+#torrents .torrent_table blockquote blockquote {
+	border: none;
+}
+
+#content .box ul {
+	margin-left: 1.5em;
+}
+
+td {
+	padding: .3em;
+}
+
+.torrent_table,
+.box {
+	margin-bottom: 2em;
+}
+
+.torrent_table,
+.filter_torrents table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.filter_torrents td {
+	padding: .5em .3em;
+	border: solid thin #000;
+}
+
+.label {
+	text-align: right;
+	padding-right: .3em;
+}
+
+textarea,
+select,
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="button"]
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 0.2em 0.2em;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+input[type="submit"],
+input[type="button"] {
+	width:10%;
+}
+
+input[type="submit"],
+input[type="button"] {
+	margin-top: .3em;
+}
+
+select {
+	margin-bottom: .2em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	width: 1em;
+	height: 1em;
+	margin-top: 1em;
+}
+
+table.cat_list td {
+	border: none;
+}
+
+.linkbox {
+	margin: 1em 0;
+	text-align: center;
+}
+
+#torrent_table .group,
+#discog_table .group,
+.group_torrent {
+	height: 100px;
+}
+
+.edition_info {
+	height: 75px;
+}
+
+.group_torrent span {
+	float: right;
+}
+
+table.noborder,
+#roster table,
+.forum_post,
+#discog_table,
+#forums table,
+#top10 table,
+#bonus table,
+#inbox table {
+	width: 100%;
+}
+
+table.forum_post {
+	padding-bottom: 3em;
+	border-bottom: solid thin #000;
+}
+
+#torrents_full-length_feature .group {
+	height: 65px;
+	background: rgba(25,25,25,1);
+}
+
+#collage table.border input[type="checkbox"],
+#requests table.cat_list input[type="checkbox"] {
+	margin-left: .8em;
+}
+
+#requests table input[type="checkbox"] {
+	margin-left: 1.3em;
+}
+
+#requests #voting select {
+	margin: 1em 0;
+}
+
+.rowa {
+	background: rgba(25,25,25,1);
+}
+
+.unreadpm {
+	height: 75px;
+}
+
+#forums h3,
+#top10 h3,
+#staff h3 {
+	margin-top: 1.5em;
+}
+
+#forums table .colhead_dark td {
+	text-align: left !important;
+}
+
+#forums table.box .colhead_dark td span {
+	float: none !important;
+}
+
+.last_read {
+	display: inline !important;
+	margin-left: 1em;
+}
+
+h4.min_padding {
+	font-size:21px;
+	white-space: nowrap;
+	max-width:175px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.editedby {
+	font-style: italic;
+	font-size: .7em;
+}
+
+.forum_unread,
+.forum_unread .box,
+.unreadpm td:nth-child(2) {
+	border: solid thin rgba(0,116,182,1) !important;
+}
+
+/* The following items are hidden */
+.hidden,
+.sidebar,
+#last5t,
+#menu #nav_torrents,
+#menu #nav_collages,
+#menu #nav_requests,
+#menu #nav_irc,
+#menu #nav_top10,
+#menu #nav_rules,
+#menu #nav_wiki,
+#menu #nav_staff,
+#userinfo #userinfo_stats,
+#userinfo #userinfo_major,
+#userinfo #userinfo_minor #nav_inbox,
+#userinfo #userinfo_minor #nav_staffinbox,
+#userinfo #userinfo_minor #nav_uploaded,
+#userinfo #userinfo_minor #nav_bookmarks,
+#userinfo #userinfo_minor #nav_comments,
+#userinfo #userinfo_minor #nav_more,
+#searchbars,
+#footer,
+#torrents #torrent_table td:first-child,
+#torrents #torrent_table td:nth-child(3),
+#torrents #torrent_table td:nth-child(4),
+#torrents #torrent_table td:nth-child(5),
+#torrents #torrent_table td:nth-child(6),
+#torrents #torrent_table td:nth-child(7),
+#torrents #torrent_table td:nth-child(8),
+#torrents #torrent_table td:nth-child(9),
+#torrents #torrent_table tr.group_torrent,
+.tags,
+#actor_table,
+#torrents #taglist,
+#torrents .cat_list a[href="#"],
+.avatar,
+#collage #collage_table,
+#collage #discog_table tr.colhead_dark td:first-child,
+#collage #discog_table tr.colhead_dark td:nth-child(2),
+#collage #discog_table tr.colhead_dark td:nth-child(4),
+#collage #discog_table tr.colhead_dark td:nth-child(5),
+#collage #discog_table tr.colhead_dark td:nth-child(6),
+#collage #discog_table tr.colhead_dark td:nth-child(7),
+#collage #discog_table tr.group td:first-child,
+#collage #discog_table tr.group td:nth-child(2),
+#collage #discog_table tr.group_torrent,
+#requests table.border td:nth-child(5),
+#requests table.border td:nth-child(6),
+#requests table.border td:nth-child(7),
+#requests table.border td:nth-child(8),
+#requests table.border td:nth-child(9),
+#forums #content table td:nth-child(4),
+#forums #content table td:nth-child(5),
+#forums #content .rowa span ~ span,
+#forums #content .rowb span ~ span,
+#staff table td:nth-child(2),
+#staff table td:nth-child(3),
+.blend,
+span.user_title,
+#bookmarks #collage_table,
+#bookmarks #torrent_table td:first-child,
+#bookmarks #torrent_table td:nth-child(2),
+#bookmarks #torrent_table td:nth-child(4),
+#bookmarks #torrent_table td:nth-child(5),
+#bookmarks #torrent_table td:nth-child(6),
+#bookmarks #torrent_table td:nth-child(7),
+#bookmarks #torrent_table tr.group_torrent {
+	display: none;
+}
+
+}
+@media (max-device-width: 640px) {
+  @-viewport {
+    width: device-width;
+  }
+  @viewport {
+	  width: device-width;
+  }
+}
