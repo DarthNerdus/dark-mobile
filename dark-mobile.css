@@ -469,6 +469,19 @@ ul.thin li {
 	text-align: center;
 }
 
+#messageformtable input[type="checkbox"] {
+	vertical-align: middle;
+}
+
+#messageformtable a {
+	white-space: nowrap;
+	float: left;
+	padding: .1em;
+	max-width:390px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 .show_torrents {
 	background: url(https://static.passthepopcorn.me/static/styles/dark/images/show.png) no-repeat center center;
 	width: 28px;
@@ -1297,6 +1310,10 @@ table.forum_post td.body {
 	padding: .4em 0 .4em 0;
 }
 
+span.time {
+	font-size: 11px;
+}
+
 blockquote {
 	margin: .9em;
 	padding: .9em;
@@ -1347,14 +1364,24 @@ input[type="button"]
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	width: 100%;
-	padding: 0.2em 0.2em;
+/* 	padding: 0.2em 0.2em; */
 	font-family: inherit;
 	font-size: inherit;
 }
 
+#inbox textarea,
+#inbox input[type="text"] {
+	margin: 5px 8px 5px 8px;
+}
+
+#quickreplytext textarea {
+	padding: .2em;
+	margin: 0px;
+}
+
 input[type="submit"],
 input[type="button"] {
-	width:10%;
+	width: auto;
 }
 
 input[type="submit"],
