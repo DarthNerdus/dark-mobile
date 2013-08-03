@@ -1432,6 +1432,10 @@ table.forum_post {
 	height: 75px;
 }
 
+.alertbar {
+	font-size: 20px;
+}
+
 #forums h3,
 #top10 h3,
 #staff h3 {
