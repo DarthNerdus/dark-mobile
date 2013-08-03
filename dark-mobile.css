@@ -1376,7 +1376,7 @@ table.cat_list td {
 	text-align: center;
 }
 
-#inbox a.username {
+#inbox .box a.username {
 	font-size: 15px;
 }
 
