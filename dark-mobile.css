@@ -1255,14 +1255,16 @@ body {
 }
 
 #content {
-	width: 791px;
-	font-size: 1.3em;
+	width: 95%;
+/* 	margin: 0 3px 0 3px; */
+	padding: 0px;
+	font-size: 1em;
 	background: rgba(25,25,25,1);
 }
 
 .main_column {
 	margin: 0 auto;
-	max-width: 90%;
+	max-width: 100%;
 }
 
 .head a,
