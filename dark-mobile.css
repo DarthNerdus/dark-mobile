@@ -1364,7 +1364,7 @@ input[type="checkbox"],
 input[type="radio"] {
 	width: 1em;
 	height: 1em;
-	margin-top: 1em;
+	vertical-align: text-top
 }
 
 table.cat_list td {
@@ -1374,6 +1374,10 @@ table.cat_list td {
 .linkbox {
 	margin: 1em 0;
 	text-align: center;
+}
+
+#inbox a.username {
+	font-size: 15px;
 }
 
 #torrent_table .group,
@@ -1466,6 +1470,14 @@ h4.min_padding {
 .editedby {
 	font-style: italic;
 	font-size: .7em;
+}
+
+#menu ul li {
+	font-size: 20px;
+}
+
+a[href="inbox.php?sort=unread"] {
+	font-size: 18px;
 }
 
 .forum_unread,
