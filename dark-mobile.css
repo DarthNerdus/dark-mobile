@@ -1288,6 +1288,7 @@ margin: 0 .2em 0 .2em;
 
 table.forum_post td.body {
 	padding: .5em;
+	font-size: 15px;
 }
 
 .head,
@@ -1300,14 +1301,15 @@ table.forum_post td.body {
 .head td,
 .colhead td,
 .colhead_dark td {
-	text-align: center;
+/* 	text-align: center; */
 	padding: .3em;
 	border: solid thin #000;
 }
 
 .pad,
 .body {
-	padding: .4em 0 .4em 0;
+	padding: .5em;
+	font-size:15px;
 }
 
 span.time {
